@@ -46,3 +46,4 @@ jobs:
           git add "$TOWN.json"
           git commit -m "Update $TOWN.json from web app" || echo "No changes to commit"
           git push https://x-access-token:$GH_PAT@github.com/vaswin0/mosque-data.git
+

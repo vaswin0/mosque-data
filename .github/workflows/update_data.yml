@@ -1,4 +1,5 @@
 name: Update Mosque Data
+
 on:
   issues:
     types: [opened]
@@ -8,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
 
       - name: Extract Data from Issue
         id: extract
@@ -19,20 +25,24 @@ jobs:
 
       - name: Parse Town Name
         run: |
-          town=$(echo "${ISSUE_BODY}" | grep "**Town:**" | cut -d ' ' -f 2)
+          town=$(echo "${ISSUE_BODY}" | grep -oP '(?<=\*\*Town:\*\* ).*')
           echo "TOWN=$town" >> $GITHUB_ENV
+          echo "Extracted Town: $town"
 
       - name: Extract JSON Data
         run: |
           json_data=$(echo "${ISSUE_BODY}" | awk '/```json/,/```/' | sed '1d;$d')
+          if [[ -z "$json_data" ]]; then
+            echo "No JSON data found. Exiting."
+            exit 1
+          fi
           echo "$json_data" > "$TOWN.json"
 
       - name: Commit and Push Changes
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
+          git pull --rebase https://x-access-token:$GH_PAT@github.com/vaswin0/mosque-data.git || echo "No remote changes"
           git add "$TOWN.json"
-          git commit -m "Update $TOWN.json from web app"
+          git commit -m "Update $TOWN.json from web app" || echo "No changes to commit"
           git push https://x-access-token:$GH_PAT@github.com/vaswin0/mosque-data.git

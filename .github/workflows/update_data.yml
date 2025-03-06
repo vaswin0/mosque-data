@@ -25,7 +25,7 @@ jobs:
 
       - name: Parse Town Name
         run: |
-          town=$(echo "${ISSUE_BODY}" | grep -oP '(?<=\*\*Town:\*\* ).*')
+          town=$(echo "${ISSUE_BODY}" | grep -oP '(?<=\*\*town:\*\* ).*')
           echo "TOWN=$town" >> $GITHUB_ENV
           echo "Extracted Town: $town"
 

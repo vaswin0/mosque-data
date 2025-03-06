@@ -25,7 +25,7 @@ jobs:
 
       - name: Parse Town Name
         run: |
-          town=$(echo '${ISSUE_BODY}' | jq -r 'town')
+          town=$(echo "$ISSUE_BODY" | jq -r '.town')
           echo "TOWN=$town" >> $GITHUB_ENV
           echo "Extracted Town: $town"
 

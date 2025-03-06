@@ -1,0 +1,50 @@
+[
+  {
+    "town": "Meppadi",
+    "mosque": "Masjid",
+    "lat": 11.5536183,
+    "lng": 76.1360794
+  },
+  {
+    "town": "Meppadi",
+    "mosque": "Mooppanad Masjid",
+    "lat": 11.5566438,
+    "lng": 76.141352
+  },
+  {
+    "town": "Meppadi",
+    "mosque": "Kappamkolly Juma Masjid",
+    "lat": 11.5640005,
+    "lng": 76.1220999
+  },
+  {
+    "town": "Meppadi",
+    "mosque": "masjid",
+    "lat": 11.5566304,
+    "lng": 76.14138419999999
+  },
+  {
+    "town": "Meppadi",
+    "mosque": "Salafi Masjid",
+    "lat": 11.5532216,
+    "lng": 76.13133719999999
+  },
+  {
+    "town": "Meppadi",
+    "mosque": "Meppadi",
+    "lat": 11.553104,
+    "lng": 76.13162450000002
+  },
+  {
+    "town": "Meppadi",
+    "mosque": "AP Juma Masjid",
+    "lat": 11.5532209,
+    "lng": 76.13344099999999
+  },
+  {
+    "town": "Meppadi",
+    "mosque": "Meppadi Juma Masjid",
+    "lat": 11.5507448,
+    "lng": 76.1113664
+  }
+]

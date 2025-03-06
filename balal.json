@@ -1,0 +1,62 @@
+[
+  {
+    "town": "Balal",
+    "mosque": "MASJID",
+    "lat": 12.3786249,
+    "lng": 75.2768416
+  },
+  {
+    "town": "Balal",
+    "mosque": "Sidique Masjid",
+    "lat": 12.3685182,
+    "lng": 75.2617398
+  },
+  {
+    "town": "Balal",
+    "mosque": "Badar Masjid mankayam.vellarikundu",
+    "lat": 12.3713675,
+    "lng": 75.28181359999999
+  },
+  {
+    "town": "Balal",
+    "mosque": "balal noor Maടjid",
+    "lat": 12.3891576,
+    "lng": 75.2839427
+  },
+  {
+    "town": "Balal",
+    "mosque": "Masjid",
+    "lat": 12.4132926,
+    "lng": 75.2322303
+  },
+  {
+    "town": "Balal",
+    "mosque": "Badariya Juma Masjid",
+    "lat": 12.4022231,
+    "lng": 75.2046414
+  },
+  {
+    "town": "Balal",
+    "mosque": "KallanchiraMakham",
+    "lat": 12.3771529,
+    "lng": 75.2791404
+  },
+  {
+    "town": "Balal",
+    "mosque": "Moolappara Badariya Juma Masjid",
+    "lat": 12.3590286,
+    "lng": 75.2406575
+  },
+  {
+    "town": "Balal",
+    "mosque": "Badhar Masjid Karattu",
+    "lat": 12.353923,
+    "lng": 75.25831
+  },
+  {
+    "town": "Balal",
+    "mosque": "Punchakkara Masjidul Huda",
+    "lat": 12.4154185,
+    "lng": 75.2658397
+  }
+]
